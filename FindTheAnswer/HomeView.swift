@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  FindTheAnswer
 //
 //  Created by Mario Alvarado on 6/14/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     @ObservedObject var viewRouter: ViewRouter
     var body: some View {
         VStack{
@@ -18,13 +18,13 @@ struct ContentView: View {
             HStack{
                 Spacer()
                 Button(action: {
-                    
+                    self.viewRouter.currentPage = "math"
                 }){
                     Text("Math")
                 }
                 Spacer()
                 Button(action: {
-                    
+                    self.viewRouter.currentPage = "spelling"
                 }){
                     Text("Spelling")
                 }
@@ -32,17 +32,17 @@ struct ContentView: View {
             }
             Spacer()
             Button(action: {
-                
+                self.viewRouter.currentPage = "information"
             }){
-                Text("Exit")
+                Text("Information")
             }
             Spacer()
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewRouter: ViewRouter())
+        HomeView(viewRouter: ViewRouter())
     }
 }

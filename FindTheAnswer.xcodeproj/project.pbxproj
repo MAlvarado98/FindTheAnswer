@@ -13,6 +13,12 @@
 		8582C4612496EEC600E980C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8582C4602496EEC600E980C0 /* Assets.xcassets */; };
 		8582C4642496EEC600E980C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8582C4632496EEC600E980C0 /* Preview Assets.xcassets */; };
 		8582C4672496EEC600E980C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8582C4652496EEC600E980C0 /* LaunchScreen.storyboard */; };
+		8582C4732497024500E980C0 /* MathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8582C4722497024500E980C0 /* MathView.swift */; };
+		8582C475249702D600E980C0 /* SpellingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8582C474249702D600E980C0 /* SpellingView.swift */; };
+		8582C4772497038100E980C0 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8582C4762497038100E980C0 /* MotherView.swift */; };
+		8582C4792497083F00E980C0 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8582C4782497083F00E980C0 /* ViewRouter.swift */; };
+		8582C47B24970DE800E980C0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8582C47A24970DE800E980C0 /* HomeView.swift */; };
+		8582C47D24970FFD00E980C0 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8582C47C24970FFD00E980C0 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		8582C4632496EEC600E980C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8582C4662496EEC600E980C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8582C4682496EEC600E980C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8582C4722497024500E980C0 /* MathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathView.swift; sourceTree = "<group>"; };
+		8582C474249702D600E980C0 /* SpellingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellingView.swift; sourceTree = "<group>"; };
+		8582C4762497038100E980C0 /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		8582C4782497083F00E980C0 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		8582C47A24970DE800E980C0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8582C47C24970FFD00E980C0 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,12 @@
 				8582C4652496EEC600E980C0 /* LaunchScreen.storyboard */,
 				8582C4682496EEC600E980C0 /* Info.plist */,
 				8582C4622496EEC600E980C0 /* Preview Content */,
+				8582C474249702D600E980C0 /* SpellingView.swift */,
+				8582C4722497024500E980C0 /* MathView.swift */,
+				8582C4762497038100E980C0 /* MotherView.swift */,
+				8582C4782497083F00E980C0 /* ViewRouter.swift */,
+				8582C47A24970DE800E980C0 /* HomeView.swift */,
+				8582C47C24970FFD00E980C0 /* InfoView.swift */,
 			);
 			path = FindTheAnswer;
 			sourceTree = "<group>";
@@ -146,9 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8582C475249702D600E980C0 /* SpellingView.swift in Sources */,
+				8582C4792497083F00E980C0 /* ViewRouter.swift in Sources */,
+				8582C4772497038100E980C0 /* MotherView.swift in Sources */,
 				8582C45B2496EEC100E980C0 /* AppDelegate.swift in Sources */,
 				8582C45D2496EEC100E980C0 /* SceneDelegate.swift in Sources */,
+				8582C47B24970DE800E980C0 /* HomeView.swift in Sources */,
 				8582C45F2496EEC100E980C0 /* ContentView.swift in Sources */,
+				8582C47D24970FFD00E980C0 /* InfoView.swift in Sources */,
+				8582C4732497024500E980C0 /* MathView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
