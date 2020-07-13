@@ -12,16 +12,15 @@ struct Response: Codable{
     var id: Int
     var word: String
 }
-/*
-class Options: ObservableObject{
-    @Published var options: [Character]
-    init(){
-        self.options = []
+
+struct DefaultTextStyle: ViewModifier {
+    func body(content: Content) ->some View{
+        content
+            .font(.system(size: 20))
     }
-}*/
+}
 
 struct SpellingView: View {
-    //@ObservedObject var myOptions: Options = Options()
     @ObservedObject var viewRouter: ViewRouter
     
     @State private var word: String = ""
@@ -51,10 +50,12 @@ struct SpellingView: View {
             }
             Spacer()
             Text("\(self.word)")
+                .font(.system(size: 35))
             Spacer()
             HStack{
                 Spacer()
                 Text("Answer")
+                    .font(.system(size: 20))
                 Spacer()
                 ForEach ( 0 ..< self.options.count ){ value in
                     Button(action: {
@@ -80,6 +81,7 @@ struct SpellingView: View {
                         }
                     }){
                         Text("\(String(self.options[value]))")
+                            .font(.system(size: 25))
                     }
                     .alert(isPresented: self.$showMessage){
                         switch self.activeAlert{
@@ -88,7 +90,7 @@ struct SpellingView: View {
                         case 1:
                             return Alert(title: Text("✖︎"))
                         case 2:
-                            return Alert(title: Text("✖︎"), message: Text("Sorry, you've lost \nYou're score was \(self.score)"))
+                            return Alert(title: Text("✖︎"), message: Text("Sorry, you've lost\nThe correct answer was \(String(self.character)) \nYour score was \(self.score)"))
                         default:
                             return Alert(title: Text("Default"))
                         }
