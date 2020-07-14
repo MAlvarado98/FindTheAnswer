@@ -16,7 +16,65 @@ struct Response: Codable{
 struct DefaultTextStyle: ViewModifier {
     func body(content: Content) ->some View{
         content
-            .font(.system(size: 20))
+            .font(.system(size: 25))
+    }
+}
+
+struct TitleTextStyle: ViewModifier {
+    func body(content: Content) ->some View{
+        content
+            .font(.system(size: 40, weight: .heavy))
+            .foregroundColor(Color.blue)
+    }
+}
+
+struct BigTextStyle: ViewModifier {
+    func body(content: Content) ->some View{
+        content
+            .font(.system(size: 35, weight: .heavy))
+            .foregroundColor(Color.red)
+    }
+}
+
+extension Text{
+    func textStyle<Style: ViewModifier>(_ style:Style)-> some View{
+        ModifiedContent(content: self, modifier: style)
+    }
+}
+
+struct InfoButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding()
+            .foregroundColor(.white)
+            .padding(.horizontal, 10)
+            .cornerRadius(25)
+            .font(.system(size: 23))
+            .background(Color.blue)
+    }
+}
+
+struct GameButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding()
+            .foregroundColor(.white)
+            .padding(.horizontal, 10)
+            .cornerRadius(25)
+            .font(.system(size: 30, weight: .heavy))
+            .background(Color.green)
+    }
+}
+
+struct OptionButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding()
+            .foregroundColor(.white)
+            .padding(.horizontal, 10)
+            .cornerRadius(25)
+            .font(.system(size: 25, weight: .heavy))
+            .background(Color.green)
     }
 }
 
@@ -44,18 +102,20 @@ struct SpellingView: View {
                 }
                 Spacer()
                 Text("Score: \(self.score)")
+                    .textStyle(DefaultTextStyle())
                 Spacer()
                 Text("Lifes: \(self.lifes)")
+                    .textStyle(DefaultTextStyle())
                 Spacer()
             }
             Spacer()
             Text("\(self.word)")
-                .font(.system(size: 35))
+                .textStyle(BigTextStyle())
             Spacer()
             HStack{
                 Spacer()
                 Text("Answer")
-                    .font(.system(size: 20))
+                    .textStyle(DefaultTextStyle())
                 Spacer()
                 ForEach ( 0 ..< self.options.count ){ value in
                     Button(action: {
@@ -81,7 +141,6 @@ struct SpellingView: View {
                         }
                     }){
                         Text("\(String(self.options[value]))")
-                            .font(.system(size: 25))
                     }
                     .alert(isPresented: self.$showMessage){
                         switch self.activeAlert{
@@ -95,6 +154,7 @@ struct SpellingView: View {
                             return Alert(title: Text("Default"))
                         }
                     }
+                    .buttonStyle(OptionButtonStyle())
                     Spacer()
                 }
             }

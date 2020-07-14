@@ -9,11 +9,13 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @ObservedObject var viewRouter: ViewRouter
     var body: some View {
         VStack{
             Spacer()
             Text("Find The Answer!")
+                .textStyle(TitleTextStyle())
             Spacer()
             HStack{
                 Spacer()
@@ -22,12 +24,14 @@ struct HomeView: View {
                 }){
                     Text("Math")
                 }
+                .buttonStyle(GameButtonStyle())
                 Spacer()
                 Button(action: {
                     self.viewRouter.currentPage = "spelling"
                 }){
                     Text("Spelling")
                 }
+                .buttonStyle(GameButtonStyle())
                 Spacer()
             }
             Spacer()
@@ -36,6 +40,7 @@ struct HomeView: View {
             }){
                 Text("Information")
             }
+            .buttonStyle(InfoButtonStyle())
             Spacer()
         }
     }

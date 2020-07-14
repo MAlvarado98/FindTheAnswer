@@ -31,16 +31,20 @@ struct MathView: View {
                 }
                 Spacer()
                 Text("Score: \(self.score)")
+                .textStyle(DefaultTextStyle())
                 Spacer()
                 Text("Lifes: \(self.lifes)")
+                .textStyle(DefaultTextStyle())
                 Spacer()
             }
             Spacer()
             Text("\(self.problem)")
+            .textStyle(BigTextStyle())
             Spacer()
             HStack{
                 Spacer()
                 Text("Answer: ")
+                .textStyle(DefaultTextStyle())
                 Spacer()
                 ForEach(0..<self.options.count){n in
                     Button(action: {
@@ -79,6 +83,7 @@ struct MathView: View {
                             return Alert(title: Text("Default"))
                         }
                     }
+                    .buttonStyle(OptionButtonStyle())
                     Spacer()
                 }
                 Spacer()
