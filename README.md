@@ -6,7 +6,7 @@ Find the Answer es una aplicación para iOS dedicada al entrenamiento cognitivo 
 # Resultados
 
 **Pantalla inicial**
-Como se observa en la siguiente imagen, esta es la vista home de la aplicación. Desde aquí podremos acceder a los dos modos de juego y a la vista de información de la aplicación.
+Como se observa en la siguiente imagen, esta es la vista home de la aplicación. Desde aquí podremos acceder a los dos modos de juego y a la vista de información de la aplicación.<BR>
 ![Vista Home](https://i.ibb.co/VgWpP3M/Screenshot-1.png)
 
 **Vista de información**
